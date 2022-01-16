@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elementi pagina*/
+.container {
+    width: 560px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+/*Parte sx container*/
+.showing {
+    height: 100%;
+    width: 465px;
+    position: relative;
+}
+
+.showing-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.showing-image-description {
+    text-align: right;
+    color: white;
+    line-height: 14px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 12px 14px;
+}
+
+.showing-image-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.showing-image-text {
+    font-size: 11px;
+}
+
+/*Parte dx container*/
+.images-selector {
+    height: 100%;
+    width: 95px;
+    position: relative;
+}
+
+.images-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+[class^="selector-image-"] {
+    width: 100%;
+    height: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+[class^="selector-image-"].unselected {
+    filter: brightness(50%);
+}
+
+[class^="selector-image-"].selected {
+    border: 1.5px solid #CCCCCC;
+}
+
+.arrows {
+    font-size: 13px;
+    color: #CCCCCC;
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.arrow.up {
+    top: 6px;
+}
+
+.arrow.down {
+    bottom: 6px;
+}
