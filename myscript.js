@@ -1,3 +1,7 @@
+let app = new Vue({
+    el: "#myApp"
+})
+
 const items = [
     'img/01.jpg',
     'img/02.jpg',
