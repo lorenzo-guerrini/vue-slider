@@ -1,5 +1,14 @@
 let app = new Vue({
-    el: "#myApp"
+    el: "#myApp",
+    data: {
+        imagesArray: [
+            'img/01.jpg',
+            'img/02.jpg',
+            'img/03.jpg',
+            'img/04.jpg',
+            'img/05.jpg'
+        ]
+    }
 })
 
 const items = [
@@ -25,22 +34,6 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
-
-// Inserisce le immagini nell'images-list a dx
-for (let i = 0; i < items.length; i++) {
-
-    const image = document.createElement("div");
-    image.classList.add("selector-image-" + i);
-
-    if (i == 0) {
-        image.classList.add("selected");
-    } else {
-        image.classList.add("unselected");
-    }
-
-    image.style.backgroundImage = "url(" + items[i] + ")";
-    document.querySelector(".images-list").append(image);
-}
 
 // Imposta immagine, titolo e descrizione iniziali a sx
 document.querySelector(".showing-image").style.backgroundImage = "url(" + items[0] + ")";
