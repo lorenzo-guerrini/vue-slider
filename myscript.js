@@ -7,7 +7,13 @@ let app = new Vue({
             'img/03.jpg',
             'img/04.jpg',
             'img/05.jpg'
-        ]
+        ],
+        selected: 0
+    },
+    methods: {
+        isSelected: function(index) {
+            return (index == this.selected)?"selected":"unselected";
+        }
     }
 })
 
