@@ -17,10 +17,10 @@
 
             <!-- Immagine a sx -->
             <div class="showing">
-                <div class="showing-image"></div>
+                <div class="showing-image" :style="`background-image: url(${images[selected].item});`"></div>
                 <div class="showing-image-description">
-                    <div class="showing-image-title"></div>
-                    <div class="showing-image-text"></div>
+                    <div class="showing-image-title">{{images[selected].title}}</div>
+                    <div class="showing-image-text">{{images[selected].text}}</div>
                 </div>
             </div>
 
@@ -28,12 +28,12 @@
             <div class="images-selector">
                 <div class="images-list">
                     <!-- Inserisce le immagini nell'images-list -->
-                    <div v-for="(image, index) in imagesArray" :class="`selector-image-${index} ${isSelected(index)}`"
-                        :style="`background-image: url('${image}')`"></div>
+                    <div v-for="(image, index) in images" :class="`selector-image-${index} ${isSelected(index)}`"
+                        :style="`background-image: url('${image.item}')`"></div>
                 </div>
                 <div class="arrows">
-                    <div class="arrow up"><i class="fas fa-chevron-circle-up"></i></div>
-                    <div class="arrow down"><i class="fas fa-chevron-circle-down"></i></div>
+                    <div class="arrow up" @click="decreasePointer"><i class="fas fa-chevron-circle-up"></i></div>
+                    <div class="arrow down" @click="increasePointer"><i class="fas fa-chevron-circle-down"></i></div>
                 </div>
             </div>
         </div>
