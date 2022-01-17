@@ -46,5 +46,8 @@ let app = new Vue({
                 this.selected = this.images.length - 1;
             }
         }
+    },
+    mounted: function() {
+        setInterval(this.increasePointer, 3000);
     }
 });
