@@ -29,7 +29,7 @@ let app = new Vue({
             }
         ],
         selected: 0,
-        interval: setInterval(this.increasePointer, 3000)
+        interval: null
     },
     methods: {
         isSelected: function (index) {
@@ -52,6 +52,7 @@ let app = new Vue({
         },
         stopInterval: function () {
             clearInterval(this.interval);
+            this.interval = null;
         }
     },
     mounted: function () {
