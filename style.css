@@ -61,7 +61,7 @@
     height: 100%;
 }
 
-[class^="selector-image-"] {
+.selector-image {
     width: 100%;
     height: 20%;
     background-position: center;
@@ -69,11 +69,11 @@
     cursor: pointer;
 }
 
-[class^="selector-image-"].unselected {
+.selector-image.unselected {
     filter: brightness(50%);
 }
 
-[class^="selector-image-"].selected {
+.selector-image.selected {
     border: 1.5px solid #CCCCCC;
 }
 

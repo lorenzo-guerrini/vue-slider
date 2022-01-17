@@ -28,7 +28,7 @@
             <div class="images-selector">
                 <div class="images-list">
                     <!-- Inserisce le immagini nell'images-list -->
-                    <div v-for="(image, index) in images" :class="`selector-image-${index} ${isSelected(index)}`"
+                    <div v-for="(image, index) in images" :class="`selector-image ${isSelected(index)}`"
                         :style="`background-image: url('${image.item}')`" @click="selected = index"></div>
                 </div>
                 <div class="arrows">
