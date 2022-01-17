@@ -29,7 +29,7 @@
                 <div class="images-list">
                     <!-- Inserisce le immagini nell'images-list -->
                     <div v-for="(image, index) in images" :class="`selector-image-${index} ${isSelected(index)}`"
-                        :style="`background-image: url('${image.item}')`"></div>
+                        :style="`background-image: url('${image.item}')`" @click="selected = index"></div>
                 </div>
                 <div class="arrows">
                     <div class="arrow up" @click="decreasePointer"><i class="fas fa-chevron-circle-up"></i></div>

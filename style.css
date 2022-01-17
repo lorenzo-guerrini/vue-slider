@@ -66,6 +66,7 @@
     height: 20%;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
 [class^="selector-image-"].unselected {
