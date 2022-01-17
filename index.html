@@ -25,7 +25,7 @@
             </div>
 
             <!-- Immagini a dx -->
-            <div class="images-selector">
+            <div class="images-selector" @mouseover="stopInterval" @mouseleave="startInterval">
                 <div class="images-list">
                     <!-- Inserisce le immagini nell'images-list -->
                     <div v-for="(image, index) in images" :class="`selector-image ${isSelected(index)}`"

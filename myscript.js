@@ -28,7 +28,8 @@ let app = new Vue({
                 text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
             }
         ],
-        selected: 0
+        selected: 0,
+        interval: setInterval(this.increasePointer, 3000)
     },
     methods: {
         isSelected: function (index) {
@@ -45,9 +46,15 @@ let app = new Vue({
             if (this.selected < 0) {
                 this.selected = this.images.length - 1;
             }
+        },
+        startInterval: function () {
+            this.interval = setInterval(this.increasePointer, 3000);
+        },
+        stopInterval: function () {
+            clearInterval(this.interval);
         }
     },
-    mounted: function() {
-        setInterval(this.increasePointer, 3000);
+    mounted: function () {
+        this.startInterval();
     }
 });
